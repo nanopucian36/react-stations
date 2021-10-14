@@ -9,6 +9,16 @@ import './App.css'
  */
 export const App = () => {
   const [dogUrl, setDogUrl] = React.useState("https://images.dog.ceo/breeds/spaniel-brittany/n02101388_2667.jpg");
+  
+  // handle = () => {
+  //   console.log("clicked!");
+  // }
+  // this.onClickButton
+
+  const onClickButton = () => {
+    setDogUrl("https://images.dog.ceo/breeds/hound-english/n02089973_1132.jpg");
+  }
+
   return (
     <div>
       <header>
@@ -18,8 +28,9 @@ export const App = () => {
         <div>
           <p>犬の画像を表示するサイトです</p>
           <img src={dogUrl} />
+          <button onClick={onClickButton} >更新</button>
         </div>
       </main>
     </div>
-  )
+  );
 }
