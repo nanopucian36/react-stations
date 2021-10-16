@@ -30,13 +30,13 @@ export const App = () => {
 
   return (
     <div>
-      <header>
+      <header className="header">
         <h1>Dogアプリ</h1>
       </header>
       <main>
-        <div>
+        <div className="mainContents">
           <p>犬の画像を表示するサイトです</p>
-          <img src={dogUrl} />
+          <img src={dogUrl} className="dogImage"/>
           <button onClick={updateImage} >更新</button>
         </div>
       </main>
