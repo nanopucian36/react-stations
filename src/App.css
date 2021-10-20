@@ -1,19 +1,20 @@
 .header {
-    display: flex;
+    /*display: flex;*/
     position: fixed;
     background-color: #8f9750;
     width: 100%;
-    height: 5%;
+    /*height: 5%;*/
     padding: 15px 0;
     top: 0;
     left: 0;
 }
 
 h1 {
-    display: flex;
-    position: fixed;
-    padding: 0;
-    top: 0;
+    /*display: flex;*/
+    /*position: fixed;*/
+    /*padding: 10;*/
+    margin: 10px;
+    /*top: 0;*/
     color: #fff;
 }
 
@@ -25,7 +26,14 @@ h1 {
     flex-wrap: wrap;
 }
 
+.leftColumn {
+    width: 30%;
+}
+
+.rightColumn {
+    width:  30%;
+}
+
 .dogImage {
-    width: 40%;
     height: auto;
 }

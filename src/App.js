@@ -35,9 +35,13 @@ export const App = () => {
       </header>
       <main>
         <div className="mainContents">
-          <p>犬の画像を表示するサイトです</p>
-          <img src={dogUrl} className="dogImage"/>
-          <button onClick={updateImage} >更新</button>
+          <div className="leftColumn">
+            <p>犬の画像を表示するサイトです</p>
+            <button onClick={updateImage} >更新</button>
+          </div>
+          <div className="rightColumn">
+            <img src={dogUrl} className="dogImage"/>
+          </div>
         </div>
       </main>
     </div>
