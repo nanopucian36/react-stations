@@ -1,8 +1,8 @@
 // DO NOT DELETE
 import * as React from 'react'
-import Dogimage from './DogImage.js';
+import { Dogimage } from './DogImage.js';
 
-function Description(props) {
+export function Description(props) {
     return (
         <main>
             <div className="mainContents">
@@ -16,5 +16,3 @@ function Description(props) {
         </main>
     )
 }
-
-export default Description;

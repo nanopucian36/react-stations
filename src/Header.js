@@ -1,7 +1,7 @@
 // DO NOT DELETE
 import * as React from 'react'
 
-function Header(props) {
+export function Header(props) {
     return (
         <div className='header'>
             <header>
@@ -10,5 +10,3 @@ function Header(props) {
         </div>
     )
 }
-
-export default Header;
