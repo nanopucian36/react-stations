@@ -13,9 +13,9 @@ import { DogListContainer } from './DogListContainer';
 export const App = () => {
   return (
     <div>
-      <DogListContainer />
       <Header title='Dogアプリ' />
       <Description desc='犬の画像を表示するサイトです' />
+      <DogListContainer />
     </div>
   )
 }
