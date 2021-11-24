@@ -2,9 +2,13 @@
 import React from 'react'
 import { useState } from "react";
 import { useEffect } from "react";
+import { BreedsSelect } from './BreedsSelect';
 
-export function DogListContainer() {
-    const [breeds, setBreeds] = useState('bulldog');
+export const DogListContainer = () => {
+    const [breeds, setBreeds] = useState([]);
+    const [selectBreed, setSelectBreed] = useState('');
+    const handleChange = (e) => setSelectBreed(e.target.value)
+
     useEffect(() => {
         fetch('https://dog.ceo/api/breeds/list/all')
             .then(response => {
@@ -15,20 +19,23 @@ export function DogListContainer() {
                 const status = data.status;
                 if (status == "success") {
                     // const breeds = data.message;
-                    setBreeds(data.message);
+                    setBreeds(Object.keys(data.message));
                     console.log('breeds');
-                    console.log(breeds);
+                    console.log(Object.keys(data.message));
                 }
             }).catch(err => {
                 console.log(err);
             });
     }, []);
+
     return (
-    //     // <span className='item'>
-    //     //     <img src={url} />
-    //     //     <button className='btn' onClick={handleClick}>更新</button>
-    //     // </span>
-        // <div>text</div>
-        <p>breeds</p>
+        // <p>breeds</p>
+        <div>
+            <BreedsSelect 
+                breeds={breeds} 
+                value={selectBreed}
+                change={handleChange}
+            />
+        </div>
     )
 }
