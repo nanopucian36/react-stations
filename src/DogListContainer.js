@@ -38,7 +38,7 @@ export const DogListContainer = () => {
                 if (data.status == "success") {
                     const imgUrl = data.message;
                     setImage(imgUrl);
-                    setBreeds(Object.keys(data.message));
+                    // setBreeds(Object.keys(data.message));
 
                 }
             }).catch(err => {
